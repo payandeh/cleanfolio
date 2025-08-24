@@ -8,17 +8,20 @@
 }
 
 .about__role {
-  margin-top: 1.2em;
+  margin-top: 0.2em;
+  color: var(--clr-fg-gray);
+  font-weight: normal;
 }
 
 .about__desc {
   font-size: 1rem;
   max-width: 600px;
+  text-align: center;
 }
 
 .about__desc,
 .about__contact {
-  margin-top: 2.4em;
+  margin-top: 1.4em;
 }
 
 .about .link--icon {
@@ -27,13 +30,6 @@
 
 .about .btn--outline {
   margin-right: 1em;
-}
-
-@media (max-width: 600px) {
-  .app .about {
-    align-items: flex-start;
-    margin-top: 2em;
-  }
 }
 
 .about__header {
@@ -46,12 +42,28 @@
 .about__picture {
   width: 180px;
   height: 180px;
-  border-radius: 70%;   /* round profile */
+  border-radius: 70%; /* round profile */
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .about__intro {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .app .about {
+    align-items: flex-start;
+    margin-top: 2em;
+  }
+  .about__picture {
+    display: none;
+  }
+  .about__role {
+    margin-top: 0.8em;
+  }
+  .about__desc {
+    text-align: left;
+  }
 }
